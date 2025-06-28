@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FlashWash - Partner Locations</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Roboto', sans-serif; }
+    iframe { border: 0; }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Navigation Bar -->
+  <header class="bg-[#2a3c44] text-white py-4">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-6">
+      <div class="flex items-center space-x-4">
+        <img src="flashwash-logo.png" alt="FlashWash Logo" class="h-10">
+        <span class="text-xl font-bold">FlashWash</span>
+      </div>
+      <nav>
+        <ul class="flex space-x-6 text-sm">
+          <li><a href="index.html" class="hover:underline">Home</a></li>
+          <li><a href="pricing.html" class="hover:underline">Plans</a></li>
+          <li><a href="partner.html" class="hover:underline">Partner</a></li>
+          <li><a href="faq.html" class="hover:underline">FAQ</a></li>
+          <li><a href="contact.html" class="hover:underline">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Map Section -->
+  <main class="max-w-5xl mx-auto py-16 px-6">
+    <h1 class="text-3xl font-bold text-[#2a3c44] mb-6 text-center">Partner Car Wash Locations</h1>
+    <div class="rounded overflow-hidden shadow-lg h-[500px]">
+      <iframe
+        width="100%"
+        height="100%"
+        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB9-demo-PLACEHOLDER&center=-25.9802,28.1273&zoom=13&q=Midrand+South+Africa"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center text-sm text-gray-500 py-6">
+    &copy; 2025 FlashWash. All rights reserved.
+  </footer>
+
+</body>
+</html>
