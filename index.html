@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FlashWash Pricing</title>
+  <title>FlashWash Partner Registration</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <style>
@@ -12,45 +12,44 @@
 </head>
 <body class="bg-white text-gray-800">
   <div class="min-h-screen px-6 py-10">
-    <header class="max-w-6xl mx-auto text-center mb-12">
-      <h1 class="text-4xl font-bold mb-4 text-[#2a3c44]">Choose Your Plan</h1>
-      <p class="text-lg text-[#38b2ac]">Affordable subscription packages for every car owner.</p>
+    <header class="max-w-2xl mx-auto text-center mb-12">
+      <h1 class="text-4xl font-bold mb-4 text-[#2a3c44]">Register Your Car Wash</h1>
+      <p class="text-lg text-[#38b2ac]">Join the FlashWash network and grow your business through steady, subscription-based traffic.</p>
     </header>
 
-    <section class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-      <div class="border p-6 rounded-2xl shadow hover:shadow-lg transition">
-        <h2 class="text-xl font-semibold text-[#2a3c44] mb-2">Basic Plan</h2>
-        <p class="text-3xl font-bold text-[#38b2ac] mb-4">R399/mo</p>
-        <ul class="text-sm mb-4 space-y-2">
-          <li>✔ 4 washes per month</li>
-          <li>✔ Exterior wash only</li>
-          <li>✔ Access to all partner stations</li>
-        </ul>
-        <button class="bg-[#38b2ac] text-white px-6 py-2 rounded-xl">Subscribe</button>
+    <form class="max-w-3xl mx-auto bg-gray-50 p-8 rounded-xl shadow space-y-6">
+      <div>
+        <label class="block font-semibold mb-1">Car Wash Name</label>
+        <input type="text" class="w-full p-3 border rounded" placeholder="e.g., Joe's Auto Spa" required />
       </div>
 
-      <div class="border p-6 rounded-2xl shadow-lg scale-105 bg-gray-50">
-        <h2 class="text-xl font-semibold text-[#2a3c44] mb-2">Standard Plan</h2>
-        <p class="text-3xl font-bold text-[#38b2ac] mb-4">R699/mo</p>
-        <ul class="text-sm mb-4 space-y-2">
-          <li>✔ 6 washes per month</li>
-          <li>✔ Interior + exterior cleaning</li>
-          <li>✔ Priority access at partner stations</li>
-        </ul>
-        <button class="bg-[#38b2ac] text-white px-6 py-2 rounded-xl">Subscribe</button>
+      <div>
+        <label class="block font-semibold mb-1">Owner's Full Name</label>
+        <input type="text" class="w-full p-3 border rounded" placeholder="e.g., Joseph Mokoena" required />
       </div>
 
-      <div class="border p-6 rounded-2xl shadow hover:shadow-lg transition">
-        <h2 class="text-xl font-semibold text-[#2a3c44] mb-2">Premium Plan</h2>
-        <p class="text-3xl font-bold text-[#38b2ac] mb-4">R999/mo</p>
-        <ul class="text-sm mb-4 space-y-2">
-          <li>✔ 10 washes per month</li>
-          <li>✔ Full service included</li>
-          <li>✔ Covers 2–3 cars</li>
-        </ul>
-        <button class="bg-[#38b2ac] text-white px-6 py-2 rounded-xl">Subscribe</button>
+      <div>
+        <label class="block font-semibold mb-1">Email Address</label>
+        <input type="email" class="w-full p-3 border rounded" placeholder="e.g., joe@example.com" required />
       </div>
-    </section>
+
+      <div>
+        <label class="block font-semibold mb-1">Phone Number</label>
+        <input type="tel" class="w-full p-3 border rounded" placeholder="e.g., +27 71 234 5678" required />
+      </div>
+
+      <div>
+        <label class="block font-semibold mb-1">Location</label>
+        <input type="text" class="w-full p-3 border rounded" placeholder="City or Suburb" required />
+      </div>
+
+      <div>
+        <label class="block font-semibold mb-1">Services Offered</label>
+        <textarea class="w-full p-3 border rounded" rows="4" placeholder="e.g., Exterior wash, interior vacuum, wax..." required></textarea>
+      </div>
+
+      <button type="submit" class="bg-[#38b2ac] text-white px-6 py-3 rounded-xl hover:bg-[#2a3c44]">Submit Registration</button>
+    </form>
 
     <footer class="mt-16 text-center text-sm text-gray-500">
       &copy; 2025 FlashWash. All rights reserved.
