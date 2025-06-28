@@ -2,48 +2,71 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>FlashWash Admin Dashboard</title>
+  <title>FlashWash Admin Dashboard (Protected)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.4/tabletop.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.4/tabletop.min.js"></script>
   <style>
     body { font-family: 'Roboto', sans-serif; }
     th, td { white-space: nowrap; }
   </style>
 </head>
 <body class="bg-white text-gray-800 px-6 py-10">
-  <header class="max-w-6xl mx-auto mb-10">
-    <h1 class="text-3xl font-bold text-[#2a3c44] mb-2">FlashWash Admin Dashboard</h1>
-    <p class="text-[#38b2ac]">View all partner registration submissions in real-time.</p>
-  </header>
 
-  <main class="max-w-6xl mx-auto">
-    <div class="overflow-auto">
-      <table class="min-w-full text-sm text-left border-collapse">
-        <thead class="bg-[#2a3c44] text-white">
-          <tr>
-            <th class="px-4 py-2 border">Timestamp</th>
-            <th class="px-4 py-2 border">Car Wash Name</th>
-            <th class="px-4 py-2 border">Owner Name</th>
-            <th class="px-4 py-2 border">Email</th>
-            <th class="px-4 py-2 border">Phone</th>
-            <th class="px-4 py-2 border">Location</th>
-            <th class="px-4 py-2 border">Services</th>
-          </tr>
-        </thead>
-        <tbody id="dashboard-body" class="bg-white">
-          <tr><td colspan="7" class="text-center py-4">Loading...</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </main>
+  <div id="login" class="max-w-xl mx-auto text-center">
+    <h1 class="text-2xl font-bold mb-4 text-[#2a3c44]">Admin Login</h1>
+    <input type="password" id="adminPass" placeholder="Enter admin password" class="w-full p-3 border rounded mb-4">
+    <button onclick="validate()" class="bg-[#38b2ac] text-white px-6 py-2 rounded-xl">Login</button>
+    <p id="error" class="text-red-600 mt-3 hidden">Incorrect password. Try again.</p>
+  </div>
 
-  <footer class="mt-16 text-center text-sm text-gray-500">
-    &copy; 2025 FlashWash. All rights reserved.
-  </footer>
+  <div id="dashboard" class="hidden">
+    <header class="max-w-6xl mx-auto mb-10">
+      <h1 class="text-3xl font-bold text-[#2a3c44] mb-2">FlashWash Admin Dashboard</h1>
+      <p class="text-[#38b2ac]">View all partner registration submissions in real-time.</p>
+    </header>
+
+    <main class="max-w-6xl mx-auto">
+      <div class="overflow-auto">
+        <table class="min-w-full text-sm text-left border-collapse">
+          <thead class="bg-[#2a3c44] text-white">
+            <tr>
+              <th class="px-4 py-2 border">Timestamp</th>
+              <th class="px-4 py-2 border">Car Wash Name</th>
+              <th class="px-4 py-2 border">Owner Name</th>
+              <th class="px-4 py-2 border">Email</th>
+              <th class="px-4 py-2 border">Phone</th>
+              <th class="px-4 py-2 border">Location</th>
+              <th class="px-4 py-2 border">Services</th>
+            </tr>
+          </thead>
+          <tbody id="dashboard-body" class="bg-white">
+            <tr><td colspan="7" class="text-center py-4">Loading...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <footer class="mt-16 text-center text-sm text-gray-500">
+      &copy; 2025 FlashWash. All rights reserved.
+    </footer>
+  </div>
 
   <script>
-    window.addEventListener('DOMContentLoaded', () => {
+    const PASSWORD = "flashadmin123";
+
+    function validate() {
+      const input = document.getElementById("adminPass").value;
+      if (input === PASSWORD) {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("dashboard").style.display = "block";
+        loadDashboard();
+      } else {
+        document.getElementById("error").classList.remove("hidden");
+      }
+    }
+
+    function loadDashboard() {
       Tabletop.init({
         key: 'https://docs.google.com/spreadsheets/d/1LYZ38iSWwoQ2B6MZGn5x7dNK1tls2RqV6Y_urFDlHdI/pubhtml',
         callback: function(data) {
@@ -65,7 +88,7 @@
         },
         simpleSheet: true
       });
-    });
+    }
   </script>
 </body>
 </html>
