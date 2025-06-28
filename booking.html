@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FlashWash - Book a Wash</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Roboto', sans-serif; }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Navigation Bar -->
+  <header class="bg-[#2a3c44] text-white py-4">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-6">
+      <div class="flex items-center space-x-4">
+        <img src="flashwash-logo.png" alt="FlashWash Logo" class="h-10">
+        <span class="text-xl font-bold">FlashWash</span>
+      </div>
+      <nav>
+        <ul class="flex space-x-6 text-sm">
+          <li><a href="index.html" class="hover:underline">Home</a></li>
+          <li><a href="pricing.html" class="hover:underline">Plans</a></li>
+          <li><a href="partner.html" class="hover:underline">Partner</a></li>
+          <li><a href="booking.html" class="underline font-bold">Book</a></li>
+          <li><a href="contact.html" class="hover:underline">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Booking Form -->
+  <main class="max-w-xl mx-auto py-16 px-6">
+    <h1 class="text-3xl font-bold text-[#2a3c44] mb-6 text-center">Book Your Car Wash</h1>
+    <form action="https://formsubmit.co/info@flashwash.co.za" method="POST" class="space-y-6">
+      <input type="hidden" name="_captcha" value="false">
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Full Name</label>
+        <input type="text" name="name" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded" />
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Phone Number</label>
+        <input type="tel" name="phone" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded" />
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Email Address</label>
+        <input type="email" name="email" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded" />
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Preferred Date</label>
+        <input type="date" name="date" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded" />
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Preferred Time</label>
+        <input type="time" name="time" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded" />
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Message (Optional)</label>
+        <textarea name="message" rows="3" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded"></textarea>
+      </div>
+      <button type="submit" class="w-full bg-[#38b2ac] text-white px-6 py-3 rounded hover:bg-[#319e9a]">Submit Booking</button>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center text-sm text-gray-500 py-6">
+    &copy; 2025 FlashWash. All rights reserved.
+  </footer>
+
+</body>
+</html>
