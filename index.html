@@ -7,12 +7,13 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body { font-family: 'Roboto', sans-serif; }
-    @keyframes spin-slow {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
+    @keyframes drive-in {
+      0% { transform: translateX(-150%); opacity: 0; }
+      60% { transform: translateX(10%); opacity: 1; }
+      100% { transform: translateX(0); }
     }
-    .animate-spin-slow {
-      animation: spin-slow 10s linear infinite;
+    .drive-in {
+      animation: drive-in 2s ease-out forwards;
     }
   </style>
 </head>
@@ -22,7 +23,7 @@
   <header class="bg-[#2a3c44] text-white py-4">
     <div class="max-w-6xl mx-auto flex justify-between items-center px-6">
       <div class="flex items-center space-x-4">
-        <img src="flashwash-logo.png" alt="FlashWash Logo" class="h-10 animate-spin-slow">
+        <img src="flashwash-logo.png" alt="FlashWash Logo" class="h-10 drive-in">
         <span class="text-xl font-bold">FlashWash</span>
       </div>
       <nav>
