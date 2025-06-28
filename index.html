@@ -21,9 +21,12 @@
   </div>
 
   <div id="dashboard" class="hidden">
-    <header class="max-w-6xl mx-auto mb-10">
-      <h1 class="text-3xl font-bold text-[#2a3c44] mb-2">FlashWash Admin Dashboard</h1>
-      <p class="text-[#38b2ac]">View all partner registration submissions in real-time.</p>
+    <header class="max-w-6xl mx-auto mb-10 flex justify-between items-center">
+      <div>
+        <h1 class="text-3xl font-bold text-[#2a3c44] mb-1">FlashWash Admin Dashboard</h1>
+        <p class="text-[#38b2ac]">View all partner registration submissions in real-time.</p>
+      </div>
+      <button onclick="logout()" class="bg-red-500 text-white px-4 py-2 rounded-xl hover:bg-red-600">Logout</button>
     </header>
 
     <main class="max-w-6xl mx-auto">
@@ -64,6 +67,12 @@
       } else {
         document.getElementById("error").classList.remove("hidden");
       }
+    }
+
+    function logout() {
+      document.getElementById("dashboard").style.display = "none";
+      document.getElementById("login").style.display = "block";
+      document.getElementById("adminPass").value = "";
     }
 
     function loadDashboard() {
