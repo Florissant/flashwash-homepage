@@ -9,7 +9,7 @@ export default function Header() {
       <Link href="/" passHref>
         <a className="cursor-pointer">
           <Image
-            src="/logo.png" // make sure logo.png is in /public
+            src="/logo.png" // Make sure this file exists in your /public directory
             alt="FlashWash Logo"
             width={140}
             height={60}
@@ -18,13 +18,16 @@ export default function Header() {
         </a>
       </Link>
 
-      {/* Optional navigation menu */}
-      <nav className="space-x-6">
+      {/* Navigation links */}
+      <nav className="flex space-x-6">
         <Link href="/about">
           <a className="text-gray-700 hover:text-green-600">About</a>
         </Link>
         <Link href="/services">
           <a className="text-gray-700 hover:text-green-600">Services</a>
+        </Link>
+        <Link href="/faq">
+          <a className="text-gray-700 hover:text-green-600">FAQ</a>
         </Link>
         <Link href="/contact">
           <a className="text-gray-700 hover:text-green-600">Contact</a>
