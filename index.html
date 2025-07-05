@@ -2,126 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FlashWash – Your Car. Always Clean.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FlashWash - Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fff;
-      color: #333;
+    body { font-family: 'Roboto', sans-serif; }
+    @keyframes spin-slow {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
     }
-    header {
-      background: linear-gradient(to right, #38a169, #319795, #3182ce);
-      color: white;
-      text-align: center;
-      padding: 60px 20px;
-    }
-    header h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-    }
-    header p {
-      font-size: 20px;
-      margin-bottom: 20px;
-    }
-    header a {
-      background: white;
-      color: #38a169;
-      padding: 12px 24px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      padding: 60px 20px;
-      text-align: center;
-    }
-    .three-columns {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 40px;
-    }
-    .card {
-      background: #f9f9f9;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      padding: 20px;
-      width: 280px;
-    }
-    footer {
-      background: #222;
-      color: white;
-      padding: 30px;
-      text-align: center;
-    }
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 36px;
-      }
-      .card {
-        width: 100%;
-        max-width: 320px;
-      }
+    .animate-spin-slow {
+      animation: spin-slow 10s linear infinite;
     }
   </style>
 </head>
-<body>
+<body class="bg-white text-gray-800">
 
-  <!-- Hero Section -->
-  <header>
-    <h1>Your Car. Always Clean.</h1>
-    <p>South Africa’s #1 car wash subscription network</p>
-    <a href="#pricing">Subscribe Now</a>
+  <!-- Navigation Bar -->
+  <header class="bg-[#2a3c44] text-white py-4">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-6">
+      <div class="flex items-center space-x-4">
+        <img src="flashwash-logo.png" alt="FlashWash Logo" class="h-10 animate-spin-slow">
+        <span class="text-xl font-bold">FlashWash</span>
+      </div>
+      <nav>
+        <ul class="flex space-x-6 text-sm">
+          <li><a href="index.html" class="underline font-bold">Home</a></li>
+          <li><a href="pricing.html" class="hover:underline">Plans</a></li>
+          <li><a href="partner.html" class="hover:underline">Partner</a></li>
+          <li><a href="faq.html" class="hover:underline">FAQ</a></li>
+          <li><a href="contact.html" class="hover:underline">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- How It Works -->
-  <section>
-    <h2>How It Works</h2>
-    <div class="three-columns">
-      <div>
-        <h3>1. Subscribe</h3>
-        <p>Choose your monthly plan</p>
-      </div>
-      <div>
-        <h3>2. Find a Partner</h3>
-        <p>Locate trusted car wash stations</p>
-      </div>
-      <div>
-        <h3>3. Get Washed</h3>
-        <p>Show QR and enjoy a clean car</p>
-      </div>
+  <!-- Hero Section -->
+  <main class="text-center py-20 px-6">
+    <h1 class="text-5xl font-bold text-[#2a3c44] mb-6">Welcome to FlashWash</h1>
+    <p class="text-lg text-gray-600 mb-8">Your subscription-based car wash network</p>
+    <div class="space-x-4">
+      <a href="pricing.html" class="bg-[#38b2ac] text-white px-6 py-3 rounded hover:bg-[#319e9a]">Subscribe Now</a>
+      <a href="partner.html" class="bg-[#2a3c44] text-white px-6 py-3 rounded hover:bg-[#1f2e35]">Become a Partner</a>
     </div>
-  </section>
-
-  <!-- Pricing -->
-  <section id="pricing">
-    <h2>Our Plans</h2>
-    <div class="three-columns">
-      <div class="card">
-        <h3>Basic</h3>
-        <p>R99/month</p>
-        <p>2 washes/month</p>
-      </div>
-      <div class="card">
-        <h3>Premium</h3>
-        <p>R199/month</p>
-        <p>4 washes/month + priority</p>
-      </div>
-      <div class="card">
-        <h3>Family</h3>
-        <p>R299/month</p>
-        <p>Up to 3 cars</p>
-      </div>
-    </div>
-  </section>
+  </main>
 
   <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 FlashWash. All rights reserved.</p>
-    <p>Email: info@flashwash.co.za</p>
+  <footer class="text-center text-sm text-gray-500 py-6">
+    &copy; 2025 FlashWash. All rights reserved.
   </footer>
 
 </body>
